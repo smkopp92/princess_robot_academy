@@ -1,0 +1,10 @@
+<h1>Princess Robots</h1>
+
+<ul>
+  <% @princess_robots.each do |princess_robot| %>
+    <li><%= link_to princess_robot.name, princess_robot_path(princess_robot) %></li>
+  <%end%>
+</ul>
+
+
+<h2><%= link_to "Add New Robot Princess", new_princess_robot_path %></h2>

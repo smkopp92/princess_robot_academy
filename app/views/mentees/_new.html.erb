@@ -1,0 +1,14 @@
+<% if mentee.errors.any? %>
+  <ul>
+    <% mentee.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for [princess_robot, mentee] do |f| %>
+  <%= f.label :name, "Mentee Name" %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Add Fool"%>
+<% end %>

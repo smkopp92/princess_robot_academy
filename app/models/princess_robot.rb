@@ -1,7 +1,7 @@
-class PrincessRobot < ActiveRecord::Base
+class PrincessRobot < ApplicationRecord
   has_many :mentees
 
-  validates :name, presence: true, uniqueness: true, format: { with: /Ezra/, message: "is not a princess robot!!"}
+  validates :name, presence: true, uniqueness: true, format: { with: /Ezra/, message: "is not a name of a princess robot!!"}
   validates :purpose, presence: true
   validates :power_level, numericality: { greater_than: 9000, message: "is not over 9000!!!!" }
 

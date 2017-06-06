@@ -1,0 +1,27 @@
+<div>
+<% if @princess_robot.errors.any? %>
+  <ul>
+    <% @princess_robot.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
+
+<div>
+<%= form_for(@princess_robot) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :purpose %>
+  <%= f.text_field :purpose %>
+
+  <%= f.label :favorite_romantic_comedy, "Favorite Romantic Comedy" %>
+  <%= f.text_field :favorite_romantic_comedy %>
+
+  <%= f.label :power_level, "Power Level" %>
+  <%= f.number_field :power_level %>
+
+  <%= f.submit "GENERATE!"%>
+<% end %>
+</div>
