@@ -2,7 +2,7 @@
 
 ![Build Status](https://codeship.com/projects/0706a160-2d12-0135-4f2b-1a16b2cfac5c/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/smkopp92/princess_robot_academy.png)
-![Coverage Status](https://coveralls.io/repos/smkopp92/princess_robot_academy/badge.png)
+![Coverage Status](https://coveralls.io/repos/github/smkopp92/princess_robot_academy/badge.svg?branch=master)
 
 This is an example app to demonstrate the different ways to test your code. This example covers the following:
 
