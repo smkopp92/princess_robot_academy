@@ -14,6 +14,15 @@ describe PrincessRobot do
   it { should have_valid(:power_level).when(9001) }
   it { should_not have_valid(:power_level).when(nil, "", 8999, true, "Bob") }
 
+  describe "uniqueness on name attribute" do
+    let(:princess_robot) { FactoryGirl.create(:princess_robot) }
+
+    it "should raise an error if we try to create another princess robot with the same name" do
+      same_name = princess_robot.name
+      expect(PrincessRobot.create(name: same_name, purpose: "Pass Butter", power_level: 10000).errors.messages.empty?).to eq false
+    end
+  end
+
   describe "#greet_mentees" do
     let(:princess_robot) { FactoryGirl.create(:princess_robot) }
     let(:sad_princess_robot) { FactoryGirl.create(:princess_robot) }
