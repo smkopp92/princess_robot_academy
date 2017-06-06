@@ -1,24 +1,39 @@
-# README
+## Princess Robot Academy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example app to demonstrate the different ways to test your code. This example covers the following:
 
-Things you may want to cover:
+* Feature Tests (Capybara/Rspec)
+* Model Tests (Rspec)
+* Controller Tests (Rspec)
+* API Controller Tests (Rspec)
+* React Testing (Karma/Enzyme)
 
-* Ruby version
+To run your spec tests, run the following after git clone:
 
-* System dependencies
+```no-highlight
+$ bundle install
+$ rake db:create
+$ rake db:migrate
+$ rake
+```
 
-* Configuration
+You can also run `rspec spec/features`, `rspec spec/controllers` or `rspec spec/models` to run a specific spec folder.
 
-* Database creation
+To run your React tests, use the following commands:
 
-* Database initialization
+```no-highlight
+$ npm install
+$ npm test
+```
 
-* How to run the test suite
+To run the app in it's entirety, run the following commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+```no-highlight
+$ rails s
+```
 
-* Deployment instructions
+and in another tab in your terminal, run
 
-* ...
+```no-highlight
+$ npm start
+```
